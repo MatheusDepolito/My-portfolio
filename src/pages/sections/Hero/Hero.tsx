@@ -5,8 +5,10 @@ import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../components/StyledButton/StyledButton";
 import theme from "../../../theme";
 import { AnimatedBackground } from "../../../components/AnimatedBackground/AnimatedBackground";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation()
 
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -45,7 +47,7 @@ const Hero = () => {
             </Grid>
             <Grid item xs={12} md={7}>
               <Typography color="primary.contrastText" variant="h1" textAlign="center">Matheus Depolito</Typography>
-              <Typography color="primary.contrastText" variant="h2" textAlign="center">I'm Software Engineer</Typography>
+              <Typography color="primary.contrastText" variant="h2" textAlign="center">I'm Fullstack Developer</Typography>
                 <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                   <Grid item xs={12} md={4} display="flex" justifyContent="center">
                     <StyledButton onClick={() => console.log("download cv")}>
@@ -59,7 +61,7 @@ const Hero = () => {
                     <StyledButton onClick={() => console.log("Select com linkedin e whatsapp")}>
                       <EmailIcon />
                         <Typography>
-                          Contact me
+                          {t("Contact me")}
                         </Typography>
                     </StyledButton>
                   </Grid>
