@@ -11,7 +11,7 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: "Segoe UI"
-  }
+  },
 });
 
 theme = responsiveFontSizes(theme);

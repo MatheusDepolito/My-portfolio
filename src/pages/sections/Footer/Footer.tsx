@@ -1,29 +1,29 @@
 import { styled } from "@mui/material"
-import theme from "../../../theme";
 
-const About = () => {
 
-  const StyledAbout = styled("div")(({ theme }) => ({
+const Footer = () => {
+
+  const StyledFooter = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.contrastText,
-    height: "100vh",
+    height: "20vh",
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.up('xs')]: { // <= mobile
-      paddingTop: "100px",
+        paddingTop: "100px",
 
     },
     [theme.breakpoints.up('md')]: { // >=mobile
         paddingTop: "0",
     }
   }))
-  
+
   return (
     <>
-      <StyledAbout>
-        About
-      </StyledAbout>
+      <StyledFooter>
+        Footer
+      </StyledFooter>
     </>
   )
 }
 
-export default About
+export default Footer
